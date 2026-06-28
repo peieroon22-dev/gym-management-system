@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DE4CC3E-54C0-464F-8BED-30E4B72D2F76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Assignment</RootNamespace>
+    <AssemblyName>Assignment</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mouve">
+      <HintPath>..\..\..\..\Desktop\Mouve.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage order product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage order product.Designer.cs">
+      <DependentUpon>Manage order product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage product.Designer.cs">
+      <DependentUpon>Manage product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage sell product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage sell product.Designer.cs">
+      <DependentUpon>Manage sell product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager appointment add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager appointment add.Designer.cs">
+      <DependentUpon>Manager appointment add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager appointment delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager appointment delete.Designer.cs">
+      <DependentUpon>Manager appointment delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager appointment report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager appointment report.Designer.cs">
+      <DependentUpon>Manager appointment report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager appointment update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager appointment update.Designer.cs">
+      <DependentUpon>Manager appointment update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager appointment.Designer.cs">
+      <DependentUpon>Manager appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager member add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager member add.Designer.cs">
+      <DependentUpon>Manager member add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager member delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager member delete.Designer.cs">
+      <DependentUpon>Manager member delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager member report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager member report.Designer.cs">
+      <DependentUpon>Manager member report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager member update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager member update.Designer.cs">
+      <DependentUpon>Manager member update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager member.Designer.cs">
+      <DependentUpon>Manager member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager product add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager product add.Designer.cs">
+      <DependentUpon>Manager product add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager product delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager product delete.Designer.cs">
+      <DependentUpon>Manager product delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager product report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager product report.Designer.cs">
+      <DependentUpon>Manager product report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager product update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager product update.Designer.cs">
+      <DependentUpon>Manager product update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager product.Designer.cs">
+      <DependentUpon>Manager product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager receptionist add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager receptionist add.Designer.cs">
+      <DependentUpon>Manager receptionist add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager receptionist delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager receptionist delete.Designer.cs">
+      <DependentUpon>Manager receptionist delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager profile.Designer.cs">
+      <DependentUpon>Manager profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager receptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager receptionist.Designer.cs">
+      <DependentUpon>Manager receptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager registration.Designer.cs">
+      <DependentUpon>Manager registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager receptionist report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager receptionist report.Designer.cs">
+      <DependentUpon>Manager receptionist report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager trainer add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager trainer add.Designer.cs">
+      <DependentUpon>Manager trainer add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager trainer delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager trainer delete.Designer.cs">
+      <DependentUpon>Manager trainer delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager trainer report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager trainer report.Designer.cs">
+      <DependentUpon>Manager trainer report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager trainer update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager trainer update.Designer.cs">
+      <DependentUpon>Manager trainer update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager trainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager trainer.Designer.cs">
+      <DependentUpon>Manager trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager receptionist update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager receptionist update.Designer.cs">
+      <DependentUpon>Manager receptionist update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager training session add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager training session add.Designer.cs">
+      <DependentUpon>Manager training session add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager training session delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager training session delete.Designer.cs">
+      <DependentUpon>Manager training session delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager training session report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager training session report.Designer.cs">
+      <DependentUpon>Manager training session report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager training session update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager training session update.Designer.cs">
+      <DependentUpon>Manager training session update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager training session.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager training session.Designer.cs">
+      <DependentUpon>Manager training session.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RE appointment add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE appointment add.Designer.cs">
+      <DependentUpon>RE appointment add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE appointment delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE appointment delete.Designer.cs">
+      <DependentUpon>RE appointment delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE appointment update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE appointment update.Designer.cs">
+      <DependentUpon>RE appointment update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE appointment.Designer.cs">
+      <DependentUpon>RE appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE manage product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE manage product.Designer.cs">
+      <DependentUpon>RE manage product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE member add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE member add.Designer.cs">
+      <DependentUpon>RE member add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE member delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE member delete.Designer.cs">
+      <DependentUpon>RE member delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE member update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE member update.Designer.cs">
+      <DependentUpon>RE member update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE member.Designer.cs">
+      <DependentUpon>RE member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE order product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE order product.Designer.cs">
+      <DependentUpon>RE order product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE product add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE product add.Designer.cs">
+      <DependentUpon>RE product add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE product delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE product delete.Designer.cs">
+      <DependentUpon>RE product delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE product update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE product update.Designer.cs">
+      <DependentUpon>RE product update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE product.Designer.cs">
+      <DependentUpon>RE product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE profile.Designer.cs">
+      <DependentUpon>RE profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE sell product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE sell product.Designer.cs">
+      <DependentUpon>RE sell product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE trainer add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE trainer add.Designer.cs">
+      <DependentUpon>RE trainer add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE trainer delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE trainer delete.Designer.cs">
+      <DependentUpon>RE trainer delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE trainer update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE trainer update.Designer.cs">
+      <DependentUpon>RE trainer update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE trainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE trainer.Designer.cs">
+      <DependentUpon>RE trainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE training session add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE training session add.Designer.cs">
+      <DependentUpon>RE training session add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE training session delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE training session delete.Designer.cs">
+      <DependentUpon>RE training session delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE training session update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE training session update.Designer.cs">
+      <DependentUpon>RE training session update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RE training session.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RE training session.Designer.cs">
+      <DependentUpon>RE training session.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReBaseForm.Designer.cs">
+      <DependentUpon>ReBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage order product.resx">
+      <DependentUpon>Manage order product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage product.resx">
+      <DependentUpon>Manage product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage sell product.resx">
+      <DependentUpon>Manage sell product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager appointment add.resx">
+      <DependentUpon>Manager appointment add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager appointment delete.resx">
+      <DependentUpon>Manager appointment delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager appointment report.resx">
+      <DependentUpon>Manager appointment report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager appointment update.resx">
+      <DependentUpon>Manager appointment update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager appointment.resx">
+      <DependentUpon>Manager appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager member add.resx">
+      <DependentUpon>Manager member add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager member delete.resx">
+      <DependentUpon>Manager member delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager member report.resx">
+      <DependentUpon>Manager member report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager member update.resx">
+      <DependentUpon>Manager member update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager member.resx">
+      <DependentUpon>Manager member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager product add.resx">
+      <DependentUpon>Manager product add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager product delete.resx">
+      <DependentUpon>Manager product delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager product report.resx">
+      <DependentUpon>Manager product report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager product update.resx">
+      <DependentUpon>Manager product update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager product.resx">
+      <DependentUpon>Manager product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager receptionist add.resx">
+      <DependentUpon>Manager receptionist add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager receptionist delete.resx">
+      <DependentUpon>Manager receptionist delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager profile.resx">
+      <DependentUpon>Manager profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager receptionist.resx">
+      <DependentUpon>Manager receptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager registration.resx">
+      <DependentUpon>Manager registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager receptionist report.resx">
+      <DependentUpon>Manager receptionist report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager trainer add.resx">
+      <DependentUpon>Manager trainer add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager trainer delete.resx">
+      <DependentUpon>Manager trainer delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager trainer report.resx">
+      <DependentUpon>Manager trainer report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager trainer update.resx">
+      <DependentUpon>Manager trainer update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager trainer.resx">
+      <DependentUpon>Manager trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager receptionist update.resx">
+      <DependentUpon>Manager receptionist update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager training session add.resx">
+      <DependentUpon>Manager training session add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager training session delete.resx">
+      <DependentUpon>Manager training session delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager training session report.resx">
+      <DependentUpon>Manager training session report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager training session update.resx">
+      <DependentUpon>Manager training session update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager training session.resx">
+      <DependentUpon>Manager training session.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RE appointment add.resx">
+      <DependentUpon>RE appointment add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE appointment delete.resx">
+      <DependentUpon>RE appointment delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE appointment update.resx">
+      <DependentUpon>RE appointment update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE appointment.resx">
+      <DependentUpon>RE appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE manage product.resx">
+      <DependentUpon>RE manage product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE member add.resx">
+      <DependentUpon>RE member add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE member delete.resx">
+      <DependentUpon>RE member delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE member update.resx">
+      <DependentUpon>RE member update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE member.resx">
+      <DependentUpon>RE member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE order product.resx">
+      <DependentUpon>RE order product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE product add.resx">
+      <DependentUpon>RE product add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE product delete.resx">
+      <DependentUpon>RE product delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE product update.resx">
+      <DependentUpon>RE product update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE product.resx">
+      <DependentUpon>RE product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE profile.resx">
+      <DependentUpon>RE profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE sell product.resx">
+      <DependentUpon>RE sell product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE trainer add.resx">
+      <DependentUpon>RE trainer add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE trainer delete.resx">
+      <DependentUpon>RE trainer delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE trainer update.resx">
+      <DependentUpon>RE trainer update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE trainer.resx">
+      <DependentUpon>RE trainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE training session add.resx">
+      <DependentUpon>RE training session add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE training session delete.resx">
+      <DependentUpon>RE training session delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE training session update.resx">
+      <DependentUpon>RE training session update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RE training session.resx">
+      <DependentUpon>RE training session.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReBaseForm.resx">
+      <DependentUpon>ReBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GYM logo%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minification %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
